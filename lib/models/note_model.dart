@@ -12,7 +12,7 @@ class NoteModle extends HiveObject {
   @HiveField(2)
   final String date;
   @HiveField(3)
-  final int color;
+   int color;
 
   NoteModle(
       {required this.title,
