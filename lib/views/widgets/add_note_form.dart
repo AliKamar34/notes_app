@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:notes_app/constants.dart';
 import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
+import 'package:notes_app/views/widgets/colors_list_view.dart';
 import 'package:notes_app/views/widgets/custom_botton.dart';
 import 'package:notes_app/views/widgets/custom_text_feild.dart';
 
@@ -29,6 +30,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
         autovalidateMode: autovalidateMode,
         child: Column(
           children: [
+            const SizedBox(
+              height: 30,
+            ),
             CustomTextField(
               label: 'Title',
               hint: 'title',
@@ -48,7 +52,12 @@ class _AddNoteFormState extends State<AddNoteForm> {
               },
             ),
             const SizedBox(
-              height: 60,
+              height: 30,
+            ),
+            const ListViewColors(),
+            // const ColorItem(),
+            const SizedBox(
+              height: 30,
             ),
             BlocBuilder<AddNoteCubit, AddNoteState>(
               builder: (context, state) {
@@ -74,6 +83,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
                   },
                 );
               },
+            ),
+            const SizedBox(
+              height: 30,
             ),
           ],
         ),
